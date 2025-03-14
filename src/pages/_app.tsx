@@ -7,6 +7,7 @@ import { WagmiProvider } from 'wagmi';
 import { RainbowKitProvider } from '@rainbow-me/rainbowkit';
 
 import { config } from '../wagmi';
+import Header from '../components/Header';
 
 const client = new QueryClient();
 
@@ -15,7 +16,10 @@ function MyApp({ Component, pageProps }: AppProps) {
     <WagmiProvider config={config}>
       <QueryClientProvider client={client}>
         <RainbowKitProvider>
-          <Component {...pageProps} />
+          <Header />
+          <div className="h-screen bg-slate-800 pt-18">
+            <Component {...pageProps} />
+          </div>
         </RainbowKitProvider>
       </QueryClientProvider>
     </WagmiProvider>
