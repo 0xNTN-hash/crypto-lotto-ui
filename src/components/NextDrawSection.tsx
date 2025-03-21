@@ -1,6 +1,5 @@
 import { useReadContract } from 'wagmi';
 import { wagmiContractConfig } from '../contracts/contracts';
-import { formatUnits } from 'viem';
 import { useEffect, useState } from 'react';
 import CountdownTimer from './CountDownTimer';
 

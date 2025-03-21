@@ -13,7 +13,7 @@ const JackpotSection = () => {
     <div className="mb-10 rounded-xl bg-slate-700 px-10 py-5">
       <p className="text-center text-2xl font-bold text-slate-200 uppercase">Total jackpot</p>
       <p className="mt-4 text-center text-lg font-bold text-green-600">
-        {`${totalJackpot && <>{formatUnits(totalJackpot, 18)} </>} USDC`}
+        {`${formatUnits(totalJackpot || BigInt(0), 18)} ETH`}
       </p>
     </div>
   );
